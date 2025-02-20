@@ -111,4 +111,7 @@
     <string name="notification_channel_description">Notificaties voor berichten van tiqr</string>
     <string name="button_allow">Sta toe</string>
     <string name="button_deny">Weiger</string>
+
+    <string name="app_update_popup_message">App update is gereed om te installeren</string>
+    <string name="app_update_popup_button">Installeer</string>
 </resources>
