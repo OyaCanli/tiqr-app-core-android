@@ -114,4 +114,6 @@
 
     <string name="app_update_popup_message">App update is gereed om te installeren</string>
     <string name="app_update_popup_button">Installeer</string>
+    <string name="app_update_testing_enabled">In-app update testing ingeschakeld</string>
+    <string name="app_update_testing_disabled">In-app update testing uitgeschakeld</string>
 </resources>

@@ -105,6 +105,11 @@ object InAppUpdatesUtil {
         }
     }
 
+    fun isTestingEnabled(activity: ComponentActivity): Boolean {
+        val preferences = activity.getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE)
+        return preferences.getBoolean(KEY_TESTING_ENABLED, false)
+    }
+
     fun setTestingEnabled(activity: ComponentActivity, enabled: Boolean) {
         val preferences = activity.getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE)
         preferences.edit().putBoolean(KEY_TESTING_ENABLED, enabled).apply()

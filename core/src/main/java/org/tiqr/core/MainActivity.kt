@@ -33,7 +33,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
+import android.view.View.OnClickListener
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.LayoutRes
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -51,12 +53,14 @@ import kotlinx.coroutines.tasks.await
 import org.tiqr.core.base.BaseActivity
 import org.tiqr.core.databinding.ActivityMainBinding
 import org.tiqr.core.scan.ScanFragment
+import org.tiqr.core.util.InAppUpdatesUtil
 import org.tiqr.data.scan.ScanKeyEventsReceiver
 import org.tiqr.core.util.extensions.currentNavigationFragment
 import org.tiqr.core.util.extensions.getNavController
 import org.tiqr.data.model.AuthenticationChallenge
 import org.tiqr.data.model.ChallengeParseResult
 import org.tiqr.data.model.EnrollmentChallenge
+import org.tiqr.data.model.TiqrConfig
 import org.tiqr.data.viewmodel.MainViewModel
 import timber.log.Timber
 
@@ -121,6 +125,24 @@ open class MainActivity : BaseActivity<ActivityMainBinding>(),
                         .show()
                 }
             }
+        }
+        if (TiqrConfig.inAppUpdateCheckEnabled) {
+            InAppUpdatesUtil.checkForUpdates(this)
+            binding.topBarIcon.setOnClickListener(object: OnClickListener {
+                var clickTimes = 0
+                override fun onClick(v: View?) {
+                    clickTimes++
+                    if (clickTimes % 5 == 0) {
+                        if (InAppUpdatesUtil.isTestingEnabled(this@MainActivity)) {
+                            InAppUpdatesUtil.setTestingEnabled(this@MainActivity, false)
+                            Toast.makeText(this@MainActivity, R.string.app_update_testing_disabled, Toast.LENGTH_LONG).show()
+                        } else {
+                            InAppUpdatesUtil.setTestingEnabled(this@MainActivity, true)
+                            Toast.makeText(this@MainActivity, R.string.app_update_testing_enabled, Toast.LENGTH_LONG).show()
+                        }
+                    }
+                }
+            })
         }
     }
 
