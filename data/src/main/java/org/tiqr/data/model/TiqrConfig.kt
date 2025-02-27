@@ -32,6 +32,9 @@ object TiqrConfig {
     var tokenExchangeEnabled: Boolean = true
         private set
 
+    var inAppUpdateCheckEnabled: Boolean = false
+        private set
+
     fun initialize(context: Context) {
         val applicationInfo = context.packageManager
             .getApplicationInfo(context.packageName, PackageManager.GET_META_DATA)
@@ -53,6 +56,6 @@ object TiqrConfig {
         authScheme = bundle.getString("tiqr_config_auth_scheme")
             ?: throw RuntimeException("$excPrefix: 'tiqr_config_auth_scheme'")
         tokenExchangeEnabled = bundle.getBoolean("tiqr_config_token_exchange_enabled", true)
-
+        inAppUpdateCheckEnabled = bundle.getBoolean("tiqr_config_in_app_update_check_enabled", false)
     }
 }

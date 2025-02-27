@@ -26,6 +26,7 @@
                 android:theme="@style/TiqrActionBar" >
 
                 <ImageView
+                    android:id="@+id/top_bar_icon"
                     android:layout_gravity="center"
                     style="@style/TopBarIconSmall"
                     android:adjustViewBounds="true"

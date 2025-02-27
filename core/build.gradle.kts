@@ -81,6 +81,7 @@ dependencies {
 
     implementation(libs.androidx.activity)
     implementation(libs.androidx.autofill)
+    implementation(libs.androidx.appUpdate)
 
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core)
