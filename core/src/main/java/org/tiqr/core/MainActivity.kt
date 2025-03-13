@@ -135,10 +135,10 @@ open class MainActivity : BaseActivity<ActivityMainBinding>(),
                     if (clickTimes % 5 == 0) {
                         if (InAppUpdatesUtil.isTestingEnabled(this@MainActivity)) {
                             InAppUpdatesUtil.setTestingEnabled(this@MainActivity, false)
-                            Toast.makeText(this@MainActivity, R.string.app_update_testing_disabled, Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@MainActivity, org.tiqr.data.R.string.app_update_testing_disabled, Toast.LENGTH_LONG).show()
                         } else {
                             InAppUpdatesUtil.setTestingEnabled(this@MainActivity, true)
-                            Toast.makeText(this@MainActivity, R.string.app_update_testing_enabled, Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@MainActivity, org.tiqr.data.R.string.app_update_testing_enabled, Toast.LENGTH_LONG).show()
                         }
                     }
                 }

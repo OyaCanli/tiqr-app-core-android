@@ -86,6 +86,7 @@ The following metadata properties are supported:
 * `tiqr_config_enroll_scheme`: The enrollment URL should start with this HTTP scheme. Do not add the :// to the end of it.
 * `tiqr_config_auth_scheme`: The authentication URL should start with this HTTP scheme. Do not add the :// to the end of it.
 * `tiqr_config_token_exchange_enabled`: If the token exchange feature is enabled. When set to false, the FCM token will not be converted, but sent directly to the server.
+* `tiqr_config_in_app_update_check_enabled`: If the application should automatically check for new updates in the Google Play Store. Disabled by default. You can also use InAppUpdatesUtil manually while keeping this disabled.
 
 # Making changes in library
 
