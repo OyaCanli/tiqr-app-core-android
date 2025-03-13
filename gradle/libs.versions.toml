@@ -2,12 +2,12 @@
 android-sdk-compile = "34"
 android-sdk-target = "34"
 android-sdk-min = "24"
-agp = "8.2.1"
+agp = "8.8.2"
 gms = "4.4.0"
 
-kotlin = "1.9.20"
+kotlin = "1.9.25"
 coroutines = "1.7.3"
-ksp-plugin = "1.9.20-1.0.14"
+ksp-plugin = "1.9.25-1.0.20"
 
 hilt = "2.48.1"
 navigation = "2.7.6"

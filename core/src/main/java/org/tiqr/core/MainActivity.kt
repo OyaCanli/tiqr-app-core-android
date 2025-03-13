@@ -53,7 +53,7 @@ import kotlinx.coroutines.tasks.await
 import org.tiqr.core.base.BaseActivity
 import org.tiqr.core.databinding.ActivityMainBinding
 import org.tiqr.core.scan.ScanFragment
-import org.tiqr.core.util.InAppUpdatesUtil
+import org.tiqr.data.util.InAppUpdatesUtil
 import org.tiqr.data.scan.ScanKeyEventsReceiver
 import org.tiqr.core.util.extensions.currentNavigationFragment
 import org.tiqr.core.util.extensions.getNavController
@@ -135,10 +135,10 @@ open class MainActivity : BaseActivity<ActivityMainBinding>(),
                     if (clickTimes % 5 == 0) {
                         if (InAppUpdatesUtil.isTestingEnabled(this@MainActivity)) {
                             InAppUpdatesUtil.setTestingEnabled(this@MainActivity, false)
-                            Toast.makeText(this@MainActivity, R.string.app_update_testing_disabled, Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@MainActivity, org.tiqr.data.R.string.app_update_testing_disabled, Toast.LENGTH_LONG).show()
                         } else {
                             InAppUpdatesUtil.setTestingEnabled(this@MainActivity, true)
-                            Toast.makeText(this@MainActivity, R.string.app_update_testing_enabled, Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@MainActivity, org.tiqr.data.R.string.app_update_testing_enabled, Toast.LENGTH_LONG).show()
                         }
                     }
                 }

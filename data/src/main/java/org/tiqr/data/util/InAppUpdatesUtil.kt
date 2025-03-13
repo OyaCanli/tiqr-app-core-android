@@ -1,8 +1,9 @@
-package org.tiqr.core.util
+package org.tiqr.data.util
 
 import android.app.Activity
 import android.app.Activity.RESULT_CANCELED
 import android.app.Activity.RESULT_OK
+import android.content.Context
 import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -14,7 +15,7 @@ import com.google.android.play.core.install.InstallStateUpdatedListener
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
-import org.tiqr.core.R
+import org.tiqr.data.R
 import timber.log.Timber
 
 object InAppUpdatesUtil {
@@ -105,13 +106,13 @@ object InAppUpdatesUtil {
         }
     }
 
-    fun isTestingEnabled(activity: ComponentActivity): Boolean {
-        val preferences = activity.getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE)
+    fun isTestingEnabled(context: Context): Boolean {
+        val preferences = context.getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE)
         return preferences.getBoolean(KEY_TESTING_ENABLED, false)
     }
 
-    fun setTestingEnabled(activity: ComponentActivity, enabled: Boolean) {
-        val preferences = activity.getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE)
+    fun setTestingEnabled(context: Context, enabled: Boolean) {
+        val preferences = context.getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE)
         preferences.edit().putBoolean(KEY_TESTING_ENABLED, enabled).apply()
     }
 }

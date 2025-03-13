@@ -71,4 +71,9 @@
 
     <string name="auth_pin_subtitle">Enter the PIN and press OK:</string>
     <string name="notification_channel_name">Messages</string>
+    
+    <string name="app_update_popup_message">App update is ready to install</string>
+    <string name="app_update_popup_button">Install</string>
+    <string name="app_update_testing_enabled">In-app update testing has been enabled</string>
+    <string name="app_update_testing_disabled">In-app update testing has been disabled</string>
 </resources>

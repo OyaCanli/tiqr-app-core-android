@@ -83,7 +83,9 @@ android {
         implementation(libs.androidx.lifecycle.livedata)
         implementation(libs.androidx.lifecycle.viewmodel)
         implementation(libs.androidx.lifecycle.scope)
+        implementation(libs.androidx.appUpdate)
         implementation(libs.google.android.material)
+
 
         implementation(libs.dagger.hilt.android)
         ksp(libs.dagger.hilt.compiler)

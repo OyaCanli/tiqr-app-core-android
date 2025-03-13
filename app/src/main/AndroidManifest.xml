@@ -70,5 +70,6 @@
         <meta-data android:name="tiqr_config_enroll_scheme" android:value="${tiqr_config_enroll_scheme}"/>
         <meta-data android:name="tiqr_config_auth_scheme" android:value="${tiqr_config_auth_scheme}"/>
         <meta-data android:name="tiqr_config_token_exchange_enabled" android:value="${tiqr_config_token_exchange_enabled}"/>
+        <meta-data android:name="tiqr_config_in_app_update_check_enabled" android:value="${tiqr_config_in_app_update_check_enabled}"/>
     </application>
 </manifest>
