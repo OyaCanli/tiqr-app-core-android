@@ -117,9 +117,4 @@ a
     <!-- Notification channel -->
     <string name="notification_channel_description">Notifications for messages from tiqr</string>
     <string name="about_copied" tools:ignore="ExtraTranslation">Copied</string>
-    
-    <string name="app_update_popup_message">App update is ready to install</string>
-    <string name="app_update_popup_button">Install</string>
-    <string name="app_update_testing_enabled">In-app update testing has been enabled</string>
-    <string name="app_update_testing_disabled">In-app update testing has been disabled</string>
 </resources>
